@@ -1,4 +1,4 @@
-package VyTrack;
+package tests.vytrack;
 /*
 //this class will be a test foundation for all test classes
 //we will put here only before and after parts
@@ -6,6 +6,7 @@ package VyTrack;
 //Every test class will extend testbase class
  */
 
+import tests.TestBase;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;

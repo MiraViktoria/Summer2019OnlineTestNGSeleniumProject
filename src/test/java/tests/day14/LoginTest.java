@@ -1,7 +1,6 @@
 package tests.day14;
 
-import VyTrack.TestBase;
-import org.testng.annotations.Ignore;
+import tests.TestBase;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;

@@ -1,4 +1,4 @@
-package VyTrack;
+package tests.vytrack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +10,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.BrowserFactory;
+import utils.BrowserUtils;
+import utils.Driver;
+
 import java.util.concurrent.TimeUnit;
 public class CalendarEventsTests {
     private WebDriver driver;
@@ -26,14 +29,21 @@ public class CalendarEventsTests {
         driver.get("https://qa1.vytrack.com/");
         driver.findElement(By.id("prependedInput")).sendKeys("storemanager85");
         driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123", Keys.ENTER);
-        WebElement activitiesElement = driver.findElement(By.linkText("Activities"));
-        wait.until(ExpectedConditions.visibilityOf(activitiesElement));
-        wait.until(ExpectedConditions.elementToBeClickable(activitiesElement));
-        activitiesElement.click();
-        WebElement calendarEventsElement = driver.findElement(By.linkText("Calendar Events"));
-        wait.until(ExpectedConditions.visibilityOf(calendarEventsElement));
-        wait.until(ExpectedConditions.elementToBeClickable(calendarEventsElement));
-        calendarEventsElement.click();
+        BrowserUtils.wait(3);
+        driver.findElement(By.linkText("Activities")).click();
+
+
+        // WebElement activitiesElement = driver.findElement(By.linkText("Activities"));
+        //wait.until(ExpectedConditions.visibilityOf(activitiesElement));
+        //wait.until(ExpectedConditions.elementToBeClickable(activitiesElement));
+        //activitiesElement.click();
+        //WebElement calendarEventsElement = driver.findElement(By.linkText("Calendar Events"));
+
+        driver.findElement(By.linkText("Calendar Events")).click();
+
+       // wait.until(ExpectedConditions.visibilityOf(calendarEventsElement));
+        //wait.until(ExpectedConditions.elementToBeClickable(calendarEventsElement));
+        //calendarEventsElement.click();
         WebElement loaderMask = driver.findElement(By.cssSelector("div[class='loader-mask shown']"));
         wait.until(ExpectedConditions.invisibilityOf(loaderMask));
     }
