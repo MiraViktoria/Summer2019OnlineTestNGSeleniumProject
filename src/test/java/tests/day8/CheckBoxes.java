@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import utils.BrowserFactory;
 
 import java.util.List;
@@ -19,6 +20,7 @@ public class CheckBoxes {
         driver.findElement(By.linkText("checkboxes")).click();
 
     }
+    @Test
     public void test1(){
 
         List<WebElement>checkboxes = driver.findElements(By.cssSelector("[type='checkbox']"));

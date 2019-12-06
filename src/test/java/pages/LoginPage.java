@@ -11,7 +11,7 @@ import utils.Driver;
 //for each page of application
 //login page = login page class
 //every page class will store webelements and methods related to that page
-public class LoginPage extends BasePage {
+public class LoginPage extends BasePage{
 
     @FindBy(id = "prependedInput") //this line will initialize web element
     public WebElement userNameInput;
@@ -25,7 +25,6 @@ public class LoginPage extends BasePage {
     @FindBy(css = "[class='alert alert-error']")
     public WebElement warningMessage;
 
-
     public LoginPage() {
         //it's mandatory if you want to use @FindBy annotation
         //this means LoginPage class
@@ -37,15 +36,15 @@ public class LoginPage extends BasePage {
      * reusable login method
      * just call this method to login
      * provide username and password as parameters
-     *
      * @param userName
      * @param password
      */
-    public void login(String userName, String password) {
+    public void login(String userName, String password){
         userNameInput.sendKeys(userName);
         //Keys.ENTER to replace login click
         passwordInput.sendKeys(password, Keys.ENTER);
     }
+
 }
 
 

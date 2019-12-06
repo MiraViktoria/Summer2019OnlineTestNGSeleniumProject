@@ -1,18 +1,10 @@
 package tests.vytrack;
-/*
-//this class will be a test foundation for all test classes
-//we will put here only before and after parts
-//In this way before and after methods will be the same
-//Every test class will extend testbase class
- */
-
-import tests.TestBase;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-
+import tests.TestBase;
 import utils.Driver;
 
 
@@ -39,5 +31,4 @@ public class LoginTests extends TestBase {
         wait.until(ExpectedConditions.titleIs("Dashboard"));
         Assert.assertEquals(Driver.get().getTitle(), "Dashboard");
     }
-
 }
