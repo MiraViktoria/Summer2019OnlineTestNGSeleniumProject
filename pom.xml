@@ -34,6 +34,17 @@
         </dependency>
 
         <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
             <version>1.0.1</version>
@@ -43,6 +54,7 @@
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>4.0.9</version>
+
         </dependency>
 
 
