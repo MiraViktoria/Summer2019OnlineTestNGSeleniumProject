@@ -25,19 +25,20 @@ public class WarmUp {
         // in this way, we can ensure that element doesn't present
         // //a[.='Home'] or //a[text()='Home'] - find link with text name Home
 
-        System.out.println("Number of links: "+links.size());
+        System.out.println("Number of links: " + links.size());
         //what if I want to print text of all links, one by one
         //loop through the collection of links
 
-        for(WebElement webElement: links){
+        for (WebElement webElement : links) {
             //print text of every link
-            System.out.println(webElement.getText());
+            if (!webElement.getText().isEmpty()) {
+                System.out.println(webElement.getText());
+            }
         }
-        driver.quit();
+            driver.quit();
+        }
+
+
     }
 
 
-
-
-
-}

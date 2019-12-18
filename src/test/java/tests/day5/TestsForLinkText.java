@@ -9,6 +9,7 @@ public class TestsForLinkText {
         WebDriver driver = BrowserFactory.getDriver("chrome");
 
         driver.get("http://practice.cybertekschool.com/");
+        //it works only if tag name is <a>
         driver.findElement(By.linkText("Autocomplete")).click();
 
         Thread.sleep(3000);

@@ -34,6 +34,7 @@ public class TitleVerification {
         } else {
             System.out.println("Test failed");
         }
+
         driver.close();
 
     }
