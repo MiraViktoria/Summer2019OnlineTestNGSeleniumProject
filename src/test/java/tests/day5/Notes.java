@@ -62,12 +62,16 @@ in code, it will look like: <input type="text" id="first_name">
 WebElement first_name = driver.findElement(By.id("first_name"));
 id must be unique! it's like SSN.
 Usually, we try to ask developers to add id's if it's possible.
-The only case when we cannot use id, is when id is dynamic. It's basically when id is different for every refresh or once in while.
+The only case when we cannot use id, is when id is dynamic. It's basically when id is
+ different for every refresh or once in while.
 
  How to understand if it's a dynamic id?
- You fond id, then you've used it for finding element. First run, script passed. Second time - NoSuchElemntException.
+ You fond id, then you've used it for finding element. First run, script passed.
+ Second time - NoSuchElemntException.
 If you see that element is not there, based on this id, that means it changed id value.
-NoSuchElemntException - means that based on your locator, selenium couldn't find any elements. There are 2 cases: element is there but we need to wait for element. Another case - element is not there indeed.
+NoSuchElemntException - means that based on your locator, selenium couldn't find any elements.
+ There are 2 cases: element is there but we need to wait for element.
+  Another case - element is not there indeed.
 please comeback at 4:15
 <a href="/autocomplete">Autocomplete</a>
 a - tag name
@@ -76,7 +80,8 @@ href - attribute
 Autocomplete - text
 <a href="/autocomplete"> - opening tag
 </a> - closing tag
-In general, <a> stands for hyperlink. It's a Clickable text. Once you click on this text, it will bring you to the different page.
+In general, <a> stands for hyperlink. It's a Clickable text. Once you click on this text,
+ it will bring you to the different page.
 We can find element, if it's a link, based on link text.
    //remember!
         //for Mac users: you don't need to use WebDriverManager for Safari

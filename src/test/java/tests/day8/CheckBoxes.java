@@ -18,13 +18,10 @@ public class CheckBoxes {
     public void setup() {
         driver = BrowserFactory.getDriver("chrome");
         driver.findElement(By.linkText("checkboxes")).click();
-
     }
     @Test
     public void test1(){
-
         List<WebElement>checkboxes = driver.findElements(By.cssSelector("[type='checkbox']"));
-
         int index = 1;
         for (WebElement checkbox :checkboxes) {
             if(checkbox.isEnabled() && !checkbox.isSelected()){
@@ -36,10 +33,8 @@ public class CheckBoxes {
             }
         }
     }
-
     @AfterMethod
     public void teardown() {
         driver.quit();
     }
-
 }

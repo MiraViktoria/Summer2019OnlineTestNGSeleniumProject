@@ -9,7 +9,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
-
 public class ActionClassHoverPractice {
 
     private WebDriver driver;
@@ -20,7 +19,8 @@ public class ActionClassHoverPractice {
     }
     @Test(description = "Verify first image")
     public void test1() {
-        //create object of actions class to perform actions (drag and drop, context click, move to specific point, etc...)
+        //create object of actions class to perform actions
+        // (drag and drop, context click, move to specific point, etc...)
         Actions action = new Actions(driver);
         //or [class='figure']:nth-of-type(1) nth means 8th, 7th, 4th child....
         WebElement image1 = driver.findElement(By.cssSelector(".figure:nth-of-type(1)"));
@@ -41,9 +41,11 @@ public class ActionClassHoverPractice {
     public void test2() {
         Actions action = new Actions(driver);
         for (int i = 1; i <= 3; i++) {
-            action.moveToElement(driver.findElement(By.cssSelector(".figure:nth-of-type(" + i + ")"))).perform();
+            action.moveToElement(driver.findElement
+                    (By.cssSelector(".figure:nth-of-type(" + i + ")"))).perform();
             BrowserUtils.wait(3);
-            String name = driver.findElement(By.cssSelector(".figure:nth-of-type(" + i + ") h5")).getText();
+            String name = driver.findElement(By.cssSelector
+                    (".figure:nth-of-type(" + i + ") h5")).getText();
             System.out.println(name);
             Assert.assertEquals(name, "name: user"+i);
         }

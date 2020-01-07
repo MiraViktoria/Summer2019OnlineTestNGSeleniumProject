@@ -37,5 +37,4 @@ public class CssSelectorPractice {
 
         driver.quit();
     }
-
 }

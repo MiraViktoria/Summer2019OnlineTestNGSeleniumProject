@@ -69,10 +69,6 @@ public class JSExecutorPractice {
         BrowserUtils.wait(2);
     }
 
-
-
-
-
     @AfterMethod
     public void after(){
         driver.quit();

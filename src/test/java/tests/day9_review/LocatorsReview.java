@@ -10,15 +10,21 @@ import utils.BrowserFactory;
 public class LocatorsReview {
 
     private WebDriver driver;
+
     @BeforeMethod
+
     public void setup(){
         driver = BrowserFactory.getDriver("chrome");
         driver.get("http://practice.cybertekschool.com/");
     }
-    //    nth-of-type(n) selector matches every element that is the nth child, of a particular type, of its parent. n can be a number, a keyword, or a formula.
-//    Tip: Look at the :nth-child() selector to select the element that is the nth child, regardless of type, of its parent.
-//  we have: id, name, tag name, class name, link text, partial link text, xpath, css selector
+    //    nth-of-type(n) selector matches every element that is the nth child, of a particular type, of its parent.
+    //    n can be a number, a keyword, or a formula.
+    //    Tip: Look at the :nth-child() selector to select the element that is the nth child, regardless of type,
+    //    of its parent.
+    //  we have: id, name, tag name, class name, link text, partial link text, xpath, css selector
+
     @Test(description = "Verify checkboxes")
+
     public void test1(){
         driver.findElement(By.linkText("Checkboxes")).click();
         // [type='checkbox'] since there are 2 elements with a same locator
@@ -33,8 +39,6 @@ public class LocatorsReview {
         Assert.assertTrue(checkbox2.isSelected(), "Checkbox 2 was not selected");
         //again, css selector is preferable, because of speed.
     }
-
-
     @AfterMethod
     public void teardown(){
         driver.quit();
@@ -50,9 +54,7 @@ input and label are siblings.
 //input[@type='radio']/following-sibling::label - go to label.
 /following-sibling::tagName/*
 /preceding-sibling::tagName/*
-
-
-     */
+*/
 }
 
 

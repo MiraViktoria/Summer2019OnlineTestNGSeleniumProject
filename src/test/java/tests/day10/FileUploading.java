@@ -22,7 +22,8 @@ public class FileUploading {
         driver.findElement(By.linkText("File Upload")).click();
         //provide path to the file
         //insert your path to the file into sendKeys() method
-        driver.findElement(By.id("file-upload")).sendKeys("C:/Users/malin/OneDrive/Desktop/IMG_1831.JPG");
+        driver.findElement(By.id("file-upload")).sendKeys(
+                "C:/Users/malin/OneDrive/Desktop/IMG_1831.JPG");
         //click submit
         driver.findElement(By.id("file-submit")).click();
         BrowserUtils.wait(4);

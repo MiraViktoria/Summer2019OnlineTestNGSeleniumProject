@@ -16,6 +16,7 @@ public class MultipleButtonsTests {
         driver = BrowserFactory.getDriver("chrome");
         driver.get("http://practice.cybertekschool.com/multiple_buttons" );
     }
+    @Test
     public void verifyButtons(){
         String expectedResult = "Clicked on button one!";
         driver.findElement(By.xpath("//*[text()='Button 1']")).click();
@@ -35,6 +36,4 @@ public class MultipleButtonsTests {
         driver.quit();
 
       }
-
-
 }

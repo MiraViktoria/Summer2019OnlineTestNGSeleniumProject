@@ -14,7 +14,8 @@ public class AbsoluteXpathTest {
         driver.get("https://login1.nextbasecrm.com/?login=yes");
         driver.findElement(By.className("login-btn")).click();
         BrowserUtils.wait(2);
-        WebElement warningMessage = driver.findElement(By.xpath("html/body/table/tbody/tr[2]/td/div/div/div[2]"));
+        WebElement warningMessage = driver.findElement
+                (By.xpath("html/body/table/tbody/tr[2]/td/div/div/div[2]"));
         System.out.println(warningMessage.getText());
 
         driver.quit();

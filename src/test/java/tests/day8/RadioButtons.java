@@ -71,12 +71,8 @@ import java.util.List;
                   BrowserUtils.wait(1);
               }
           }
-
-
-
           @AfterMethod
     public void teardown(){
         driver.quit();
     }
 }
-

@@ -33,7 +33,6 @@ public class LoginTestsWithExcel extends TestBase {
             extentTest.pass("Login test passed for user "+username);
         }
     }
-
     //is a test data supplier
     //as many sets of data it returns
     //as many times exactly same test will run
@@ -42,9 +41,7 @@ public class LoginTestsWithExcel extends TestBase {
         ExcelUtil qa2 = new ExcelUtil("vytrack_testusers.xlsx", "QA2-short");
         return qa2.getDataArray();
     }
-
-
-//    public static void main(String[] args) {
+    //    public static void main(String[] args) {
 //        ExcelUtil qa2 = new ExcelUtil("vytrack_testusers.xlsx", "QA2-short");
 //        System.out.println("Row count: " + qa2.rowCount());
 //        System.out.println(qa2.getColumnsNames());
@@ -58,6 +55,4 @@ public class LoginTestsWithExcel extends TestBase {
 //            System.out.println(map.get("username"));
 //        }
 //    }
-
-
 }

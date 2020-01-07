@@ -28,6 +28,4 @@ public class DragAndDropPractice {
         BrowserUtils.wait(3);//for demo
         driver.quit();
     }
-
-
 }

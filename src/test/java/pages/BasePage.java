@@ -55,7 +55,8 @@ public class BasePage {
     public boolean waitUntilLoaderMaskDisappear() {
         WebDriverWait wait = new WebDriverWait(Driver.get(), 10);
         try {
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div[class='loader-mask shown']")));
+            wait.until(ExpectedConditions.invisibilityOfElementLocated
+                    (By.cssSelector("div[class='loader-mask shown']")));
             return true;
         } catch (NoSuchElementException e) {
             System.out.println("Loader mask not found!");
@@ -135,7 +136,9 @@ public class BasePage {
     }
 
     public void waitForPageSubTitle(String pageSubtitleText) {
-        new WebDriverWait(Driver.get(), 15).until(ExpectedConditions.textToBe(By.cssSelector("h1[class='oro-subtitle']"), pageSubtitleText));
+        new WebDriverWait(Driver.get(), 15).until
+                (ExpectedConditions.textToBe(By.cssSelector("h1[class='oro-subtitle']"),
+                        pageSubtitleText));
     }
 
 }

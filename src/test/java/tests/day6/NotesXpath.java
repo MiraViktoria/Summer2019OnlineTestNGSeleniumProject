@@ -1,7 +1,6 @@
 package tests.day6;
 
-public class Notes {
-
+public class NotesXpath {
     /*
     Agenda: Xpath
         absolute vs relative

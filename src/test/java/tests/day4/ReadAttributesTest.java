@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import utils.BrowserFactory;
 
 public class ReadAttributesTest {
-
     public static void main(String[] args) {
         WebDriver driver = BrowserFactory.getDriver("chrome");
 
@@ -33,5 +32,4 @@ public class ReadAttributesTest {
 
         driver.close();
     }
-
 }

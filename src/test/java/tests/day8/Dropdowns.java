@@ -1,5 +1,4 @@
 package tests.day8;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,9 +10,6 @@ import org.testng.annotations.Test;
 import utils.BrowserFactory;
 import utils.BrowserUtils;
 import java.util.List;
-
-
-
 public class Dropdowns {
     private WebDriver driver;
     //   <select id="dropdown">
@@ -37,7 +33,8 @@ public class Dropdowns {
         Select select = new Select(dropdown);
         //to select any option by visible text:
         // also you can select by value, or index
-        //<option value="1">Option 1</option> value is 1, Option 1 is a visible text, in between >Text< (in between angled brackets)
+        //<option value="1">Option 1</option> value is 1, Option 1 is a visible text, in between >Text<
+        // (in between angled brackets)
         select.selectByVisibleText("Option 2");
         BrowserUtils.wait(2);
         //how to verify that option 2 is selected

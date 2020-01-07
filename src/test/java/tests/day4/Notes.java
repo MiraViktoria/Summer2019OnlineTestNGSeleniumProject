@@ -13,7 +13,8 @@ Agenda:
 #####################################################
 Open inspector in Chrome. Right click --> inspect.
 In the inspector we are reading a source to create locators.
-Locator, it's thing that helps selenium to find element, and later work with that element. For example: click, enter text, read text/attributes, select, etc.
+Locator, it's thing that helps selenium to find element, and later work with that element.
+ For example: click, enter text, read text/attributes, select, etc.
 In the Selenium, we have a WebElement Interface
 Interface is like class, but has different purpose.
 WebElement represents any kind of element on the page.
@@ -22,7 +23,9 @@ orange - attribute
 blue - value of attribute
 black - text
 click command + F on mac, or control + F on windows.
-When you have a task, to automate something, first you need to read and analyze. Based on acceptance criteria/business requirements you develop a test script. Before any automation, test it manually.
+When you have a task, to automate something, first you need to read and analyze.
+Based on acceptance criteria/business requirements you develop a test script.
+ Before any automation, test it manually.
 #####For automation
 First, you need to find elements. For this, we have 8 locators.
  id
@@ -34,7 +37,8 @@ First, you need to find elements. For this, we have 8 locators.
  linkText
  partialLinkText
  As of today, we are using id.
- Id it's the best way to find element. ID must be unique. Also, in terms of performance, it's the fastest way to find element.
+ Id it's the best way to find element. ID must be unique.
+  Also, in terms of performance, it's the fastest way to find element.
 WebElement element = new WebElement(); // it will not work
 Because it's an interface.
 Instead, we do:
